@@ -1,0 +1,35 @@
+@use '../../../styles/responsive/footer';
+
+.footer {
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+    padding: 28px 0;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: #F0EFE8;
+    span { color: var(--purple-400); }
+  }
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(240,239,232,0.3);
+  }
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    a {
+      font-size: 12px;
+      color: rgba(240,239,232,0.4);
+      text-decoration: none;
+      transition: color 0.25s ease;
+      &:hover { color: #F0EFE8; }
+    }
+  }

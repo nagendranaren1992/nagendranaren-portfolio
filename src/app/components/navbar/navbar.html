@@ -1,0 +1,18 @@
+<header class="navbar" [class.scrolled]="scrolled()">
+    <div class="container nav-inner">
+        <a class="nav-logo" (click)="scrollTo('#hero')">
+            Nagendra<span>.</span>
+        </a>
+
+        <nav class="nav-links" [class.open]="menuOpen()">
+            <a *ngFor="let link of navLinks" (click)="scrollTo(link.href)" class="nav-link">
+                {{ link.label }}
+            </a>
+            <a href="mailto:appala.naren@gmail.com" class="nav-cta">Hire me ↗</a>
+        </nav>
+
+        <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>

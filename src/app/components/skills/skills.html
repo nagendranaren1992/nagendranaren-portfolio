@@ -1,0 +1,39 @@
+<section class="skills" id="skills">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-label">Skills</span>
+            <h2 class="section-title">Tech stack & expertise</h2>
+            <p class="section-desc">Technologies I use to build performant, scalable web applications.</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-category fade-up" *ngFor="let cat of skillCategories; let i = index"
+                [style.animation-delay]="(i * 0.1) + 's'">
+                <div class="cat-header">
+                    <span class="cat-title">{{ cat.title }}</span>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-item" *ngFor="let skill of cat.skills">
+                        <div class="skill-top">
+                            <span class="skill-name">
+                                <span class="skill-icon">{{ skill.icon }}</span>
+                                {{ skill.name }}
+                            </span>
+                            <span class="skill-pct">{{ skill.level }}%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" [style.width]="skill.level + '%'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="workflow-section fade-up">
+            <div class="workflow-label">Workflow</div>
+            <div class="workflow-tags">
+                <span class="workflow-tag" *ngFor="let w of workflows">{{ w }}</span>
+            </div>
+        </div>
+    </div>
+</section>

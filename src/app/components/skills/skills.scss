@@ -1,0 +1,130 @@
+@use '../../../styles/responsive/skills';
+
+.skills {
+    padding: 100px 0;
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+  }
+  
+  .section-header {
+    margin-bottom: 56px;
+  }
+  
+  .section-desc {
+    font-size: 15px;
+    color: rgba(240,239,232,0.45);
+    max-width: 480px;
+    line-height: 1.7;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  
+  .skill-category {
+    background: rgba(255,255,255,0.03);
+    border: 0.5px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+  }
+  
+  .cat-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.06);
+  }
+  
+  .cat-title {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--purple-400);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .skill-item {}
+  
+  .skill-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .skill-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(240,239,232,0.8);
+    font-weight: 400;
+  }
+  
+  .skill-icon { font-size: 14px; }
+  
+  .skill-pct {
+    font-size: 11px;
+    color: rgba(240,239,232,0.35);
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .skill-bar-bg {
+    height: 3px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  
+  .skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--purple-600), var(--purple-400));
+    border-radius: 99px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* WORKFLOW */
+  .workflow-section {
+    padding: 28px;
+    background: rgba(255,255,255,0.02);
+    border: 0.5px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-xl);
+  }
+  
+  .workflow-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(240,239,232,0.35);
+    margin-bottom: 14px;
+  }
+  
+  .workflow-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .workflow-tag {
+    font-size: 13px;
+    color: rgba(240,239,232,0.65);
+    background: rgba(127, 119, 221, 0.1);
+    border: 0.5px solid rgba(127, 119, 221, 0.2);
+    padding: 6px 14px;
+    border-radius: 99px;
+    transition: all var(--transition);
+  
+    &:hover {
+      background: rgba(127, 119, 221, 0.2);
+      color: #F0EFE8;
+    }
+  }

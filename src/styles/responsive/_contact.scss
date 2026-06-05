@@ -1,0 +1,80 @@
+@use '../breakpoints' as *;
+
+@include tablet-down {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include mobile {
+  .contact {
+    padding: 72px 0;
+  }
+
+  .contact-form-wrap {
+    padding: 24px;
+  }
+
+  .contact-item {
+    padding: 14px 16px;
+  }
+}
+
+@include mobile-sm {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact-value {
+    font-size: 12px;
+    word-break: break-word;
+  }
+
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@include tablet {
+  .contact {
+    padding: 88px 0;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 28px;
+  }
+}
+
+@include uhd {
+  .contact {
+    padding: 120px 0;
+  }
+
+  .contact-layout {
+    gap: 48px;
+  }
+
+  .contact-form-wrap {
+    padding: 40px;
+  }
+
+  .contact-item {
+    padding: 18px 22px;
+  }
+
+  .contact-value {
+    font-size: 14px;
+  }
+}
+
+@include uhd-4k {
+  .contact {
+    padding: 140px 0;
+  }
+}

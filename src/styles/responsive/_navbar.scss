@@ -1,0 +1,91 @@
+@use '../breakpoints' as *;
+
+@include mobile {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0e0e0c;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+
+    &.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  .nav-link {
+    font-size: 24px;
+    color: #f0efe8;
+  }
+
+  .navbar {
+    padding: 16px 0;
+
+    &.scrolled {
+      padding: 10px 0;
+    }
+  }
+}
+
+@include mobile-sm {
+  .nav-logo {
+    font-size: 18px;
+  }
+
+  .nav-cta {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+}
+
+@include tablet {
+  .nav-links {
+    gap: 24px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+}
+
+@include uhd {
+  .nav-logo {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 40px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .nav-cta {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+}
+
+@include uhd-4k {
+  .nav-logo {
+    font-size: 24px;
+  }
+
+  .navbar {
+    padding: 24px 0;
+  }
+}

@@ -1,0 +1,77 @@
+@use '../breakpoints' as *;
+
+@include tablet-down {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include mobile {
+  .skills {
+    padding: 72px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .skill-category,
+  .workflow-section {
+    padding: 22px;
+  }
+}
+
+@include mobile-sm {
+  .skills {
+    padding: 60px 0;
+  }
+
+  .workflow-tags {
+    gap: 6px;
+  }
+
+  .workflow-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
+
+@include tablet {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .skills {
+    padding: 88px 0;
+  }
+}
+
+@include uhd {
+  .skills {
+    padding: 120px 0;
+  }
+
+  .section-header {
+    margin-bottom: 64px;
+  }
+
+  .skills-grid {
+    gap: 32px;
+  }
+
+  .skill-category,
+  .workflow-section {
+    padding: 36px;
+  }
+
+  .skill-name {
+    font-size: 14px;
+  }
+}
+
+@include uhd-4k {
+  .skills {
+    padding: 140px 0;
+  }
+}

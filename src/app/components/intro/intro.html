@@ -1,0 +1,81 @@
+<section class="hero" id="hero">
+    <div class="hero-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="container hero-inner">
+        <div class="hero-content fade-up">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Actively looking for Technical Lead / Architect roles
+            </div>
+
+            <h1 class="hero-name">
+                Hi, I'm<br>
+                <span class="name-highlight">Nagendra Naren</span>
+            </h1>
+
+            <div class="hero-role">
+                <span class="role-text">{{ currentRole() }}</span>
+                <span class="cursor">|</span>
+            </div>
+
+            <p class="hero-desc fade-up fade-up-2">
+                Senior Web Developer with <strong>10+ years</strong> of experience building
+                enterprise-grade Angular applications and scalable healthcare platforms.
+                Based in Hyderabad, India.
+            </p>
+
+            <div class="hero-actions fade-up fade-up-3">
+                <button class="btn-primary" (click)="scrollToProjects()">
+                    View my work
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <button class="btn-outline" (click)="scrollToContact()">
+                    Get in touch
+                </button>
+                <a href="assets/Nagendra_Naren_Resume.pdf" download class="btn-ghost">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                    </svg>
+                    Download CV
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual fade-up fade-up-2">
+            <div class="avatar-wrap">
+                <div class="avatar">
+                    <img src="assets/images/profile.jpg" alt="Nagendra Naren"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="avatar-fallback">NN</div>
+                </div>
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring ring-2"></div>
+            </div>
+
+            <div class="floating-card" *ngFor="let card of floatingCards" [ngClass]="card.class">
+                <span class="card-icon">{{ card.icon }}</span>
+                <div>
+                    <div class="card-val">{{ card.value }}</div>
+                    <div class="card-lbl">{{ card.label }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-bar fade-up fade-up-4">
+        <div class="container">
+            <div class="stats-inner">
+                <div class="stat" *ngFor="let s of stats">
+                    <div class="stat-val">{{ s.value }}</div>
+                    <div class="stat-lbl">{{ s.label }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

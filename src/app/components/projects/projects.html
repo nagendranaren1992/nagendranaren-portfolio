@@ -1,0 +1,34 @@
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-label">Projects</span>
+            <h2 class="section-title">What I've built</h2>
+            <p class="section-desc">A selection of projects from 10+ years of web development.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card fade-up" *ngFor="let p of projects; let i = index" [class.featured]="p.featured"
+                [style.animation-delay]="(i * 0.08) + 's'">
+
+                <div class="card-top">
+                    <span class="proj-num">{{ p.number }}</span>
+                    <span class="proj-icon">{{ p.icon }}</span>
+                    <a *ngIf="p.link" [href]="p.link" target="_blank" class="proj-link-icon"
+                        aria-label="View on GitHub">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="proj-name">{{ p.name }}</div>
+                <p class="proj-desc">{{ p.desc }}</p>
+
+                <div class="proj-tags">
+                    <span class="proj-tag" *ngFor="let tag of p.tags">{{ tag }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,53 @@
+@use '../breakpoints' as *;
+
+@include mobile {
+  .footer {
+    padding: 24px 0;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+@include mobile-sm {
+  .footer-copy {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+@include tablet {
+  .footer-inner {
+    gap: 20px;
+  }
+}
+
+@include uhd {
+  .footer {
+    padding: 36px 0;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .footer-copy,
+  .footer-links a {
+    font-size: 13px;
+  }
+}
+
+@include uhd-4k {
+  .footer {
+    padding: 44px 0;
+  }
+}

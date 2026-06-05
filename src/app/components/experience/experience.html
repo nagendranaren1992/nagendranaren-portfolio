@@ -1,0 +1,62 @@
+<section class="experience" id="experience">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-label">Experience</span>
+            <h2 class="section-title">Career journey</h2>
+        </div>
+
+        <div class="exp-layout">
+            <!-- Company tabs -->
+            <div class="exp-tabs fade-up">
+                <button class="exp-tab" *ngFor="let exp of experiences; let i = index"
+                    [class.active]="activeIndex() === i" (click)="setActive(i)">
+                    <span class="tab-company">{{ exp.company }}</span>
+                    <span class="tab-period">{{ exp.period }}</span>
+                    <span class="tab-badge" *ngIf="exp.current">Current</span>
+                </button>
+            </div>
+
+            <!-- Experience detail -->
+            <div class="exp-detail fade-up fade-up-2" *ngFor="let exp of experiences; let i = index">
+                <ng-container *ngIf="activeIndex() === i">
+                    <div class="detail-header">
+                        <div>
+                            <div class="detail-role">{{ exp.role }}</div>
+                            <div class="detail-company">@ {{ exp.company }}</div>
+                        </div>
+                        <div class="detail-meta">
+                            <span class="meta-period">{{ exp.period }}</span>
+                            <span class="meta-dot">·</span>
+                            <span class="meta-duration">{{ exp.duration }}</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-type">{{ exp.type }}</div>
+
+                    <p class="detail-desc">{{ exp.description }}</p>
+
+                    <div class="detail-tags">
+                        <span class="detail-tag" *ngFor="let tag of exp.tags">{{ tag }}</span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <!-- Education strip -->
+        <div class="education fade-up">
+            <div class="edu-label section-label">Education</div>
+            <div class="edu-grid">
+                <div class="edu-item">
+                    <div class="edu-degree">B.Tech – Electronics & Communication Engineering</div>
+                    <div class="edu-school">Bandari Srinivas Institute of Technology (JNTU-H)</div>
+                    <div class="edu-meta">2009 – 2013 · 71.07%</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-degree">M.P.C – Intermediate</div>
+                    <div class="edu-school">Narayana Junior College</div>
+                    <div class="edu-meta">2007 – 2009 · 81.2%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

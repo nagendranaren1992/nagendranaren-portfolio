@@ -1,0 +1,184 @@
+@use '../../../styles/responsive/experience';
+
+.experience {
+    padding: 100px 0;
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+  }
+  
+  .section-header { margin-bottom: 56px; }
+  
+  .exp-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+  
+  /* TABS */
+  .exp-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .exp-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 16px 20px;
+    border-radius: var(--radius-lg);
+    border: 0.5px solid transparent;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition);
+    position: relative;
+  
+    &:hover {
+      background: rgba(255,255,255,0.03);
+    }
+  
+    &.active {
+      background: rgba(83, 74, 183, 0.12);
+      border-color: rgba(127, 119, 221, 0.25);
+  
+      .tab-company { color: #F0EFE8; }
+    }
+  }
+  
+  .tab-company {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(240,239,232,0.5);
+    transition: color var(--transition);
+    line-height: 1.4;
+  }
+  
+  .tab-period {
+    font-size: 11px;
+    color: rgba(240,239,232,0.3);
+  }
+  
+  .tab-badge {
+    font-size: 10px;
+    background: rgba(99, 153, 34, 0.15);
+    color: #639922;
+    border: 0.5px solid rgba(99, 153, 34, 0.3);
+    padding: 2px 8px;
+    border-radius: 99px;
+    margin-top: 2px;
+  }
+  
+  /* DETAIL */
+  .exp-detail {
+    background: rgba(255,255,255,0.03);
+    border: 0.5px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+  }
+  
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .detail-role {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: #F0EFE8;
+    margin-bottom: 4px;
+  }
+  
+  .detail-company {
+    font-size: 14px;
+    color: var(--purple-400);
+  }
+  
+  .detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  
+  .meta-period, .meta-duration {
+    font-size: 12px;
+    color: rgba(240,239,232,0.4);
+  }
+  
+  .meta-dot { color: rgba(240,239,232,0.2); }
+  
+  .detail-type {
+    font-size: 11px;
+    color: rgba(240,239,232,0.35);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.06);
+  }
+  
+  .detail-desc {
+    font-size: 14px;
+    color: rgba(240,239,232,0.6);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  
+  .detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .detail-tag {
+    font-size: 11px;
+    background: rgba(83, 74, 183, 0.12);
+    color: var(--purple-400);
+    border: 0.5px solid rgba(127, 119, 221, 0.2);
+    padding: 4px 12px;
+    border-radius: 99px;
+  }
+  
+  /* EDUCATION */
+  .education {
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+    padding-top: 48px;
+  }
+  
+  .edu-label { margin-bottom: 24px; }
+  
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .edu-item {
+    padding: 24px;
+    background: rgba(255,255,255,0.02);
+    border: 0.5px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+  }
+  
+  .edu-degree {
+    font-size: 14px;
+    font-weight: 500;
+    color: #F0EFE8;
+    margin-bottom: 6px;
+  }
+  
+  .edu-school {
+    font-size: 12px;
+    color: var(--purple-400);
+    margin-bottom: 6px;
+  }
+  
+  .edu-meta {
+    font-size: 11px;
+    color: rgba(240,239,232,0.35);
+  }

@@ -1,0 +1,55 @@
+// Responsive breakpoints — mobile · tablet · desktop · UHD
+$bp-mobile-sm: 479px;
+$bp-mobile: 767px;
+$bp-tablet: 1023px;
+$bp-desktop-lg: 1439px;
+$bp-uhd: 1919px;
+$bp-uhd-4k: 2559px;
+
+@mixin mobile-sm {
+  @media (max-width: $bp-mobile-sm) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: ($bp-mobile + 1)) and (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: ($bp-tablet + 1)) and (max-width: $bp-uhd) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: ($bp-tablet + 1)) and (max-width: $bp-desktop-lg) {
+    @content;
+  }
+}
+
+@mixin uhd {
+  @media (min-width: ($bp-uhd + 1)) {
+    @content;
+  }
+}
+
+@mixin uhd-4k {
+  @media (min-width: ($bp-uhd-4k + 1)) {
+    @content;
+  }
+}

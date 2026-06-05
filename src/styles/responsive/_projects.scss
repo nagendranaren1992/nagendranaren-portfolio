@@ -1,0 +1,91 @@
+@use '../breakpoints' as *;
+
+@include tablet-down {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-card.featured {
+    grid-column: span 1;
+  }
+}
+
+@include mobile {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    padding: 72px 0;
+  }
+
+  .project-card {
+    padding: 22px;
+  }
+}
+
+@include mobile-sm {
+  .projects {
+    padding: 60px 0;
+  }
+
+  .proj-name {
+    font-size: 15px;
+  }
+
+  .project-card.featured .proj-name {
+    font-size: 17px;
+  }
+}
+
+@include tablet {
+  .projects {
+    padding: 88px 0;
+  }
+
+  .projects-grid {
+    gap: 14px;
+  }
+}
+
+@include desktop-lg {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-card.featured {
+    grid-column: span 2;
+  }
+}
+
+@include uhd {
+  .projects {
+    padding: 120px 0;
+  }
+
+  .projects-grid {
+    gap: 24px;
+  }
+
+  .project-card {
+    padding: 36px;
+  }
+
+  .project-card.featured {
+    grid-column: span 2;
+
+    .proj-name {
+      font-size: 24px;
+    }
+  }
+
+  .proj-name {
+    font-size: 18px;
+  }
+}
+
+@include uhd-4k {
+  .projects {
+    padding: 140px 0;
+  }
+}
