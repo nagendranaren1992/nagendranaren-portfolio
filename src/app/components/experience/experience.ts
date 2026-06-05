@@ -25,12 +25,12 @@ export class Experience {
   experiences: ExperienceItem[] = [
     {
       company: 'iHUB Technologies Pvt. Ltd.',
-      role: 'Senior Web Developer',
+      role: 'Senior Technical Lead — Web & Healthcare Architecture',
       period: 'Feb 2016 – Present',
       duration: '9+ years',
       type: 'Product Based · Full-time',
-      description: 'Leading frontend development of a large-scale Hospital Management System. Personally designed and developed multiple billing modules including OP, IP, Pharmacy & Lab. Played a key role in the Patient Journey module and led the Angular 12 → 17 upgrade initiative across the platform.',
-      tags: ['Angular 17', 'TypeScript', 'Java', 'RxJS', 'Bootstrap', 'Agile', 'Healthcare'],
+      description: 'Architect and lead end-to-end development of a modular clinical web platform (OT scheduling, patient counseling, admissions and UHID-based patient tracking). Led the Angular 12 → 17 migration to standalone components and signals, refactored 80,000+ lines of legacy JavaScript into type-safe TypeScript, and introduced a GraphQL layer that cut API over-fetching by ~40%. Built a shared Angular Material / PrimeNG design system that reduced new-module UI time by 35%, mentoring a team of 8+ engineers while sustaining 99.9% uptime.',
+      tags: ['Angular 17+', 'React', 'Next.js', 'TypeScript', 'Node.js', 'GraphQL', 'Healthcare'],
       current: true,
     },
     {

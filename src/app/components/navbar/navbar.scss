@@ -1,5 +1,3 @@
-@use '../../../styles/responsive/navbar';
-
 .navbar {
     position: fixed;
     top: 0;
@@ -88,3 +86,5 @@
     &.open span:nth-child(2) { opacity: 0; }
     &.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
   }
+
+@import '../../../styles/responsive/navbar';

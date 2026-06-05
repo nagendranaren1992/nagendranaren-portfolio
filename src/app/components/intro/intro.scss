@@ -1,5 +1,3 @@
-@use '../../../styles/responsive/intro';
-
 .hero {
     min-height: 100vh;
     display: flex;
@@ -71,6 +69,10 @@
     border-radius: 99px;
     margin-bottom: 24px;
     background: rgba(255,255,255,0.04);
+    max-width: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+    line-height: 1.4;
   }
   
   .badge-dot {
@@ -199,6 +201,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    max-width: 100%;
+    overflow: hidden;
   }
   
   .avatar-wrap {
@@ -323,3 +327,5 @@
       color: rgba(240,239,232,0.4);
     }
   }
+
+@import '../../../styles/responsive/intro';

@@ -9,7 +9,7 @@ import { Component, signal } from '@angular/core';
   styleUrl: './intro.scss',
 })
 export class Intro {
-  roles = ['Senior Technical Lead', 'Web Architect', 'Angular Expert'];
+  roles = ['Senior Technical Lead', 'Web & Frontend Architect', 'Angular & React Expert', 'Healthcare Platform Specialist'];
   currentRole = signal('');
   private roleIndex = 0;
   private charIndex = 0;

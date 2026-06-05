@@ -1,5 +1,3 @@
-@use '../../../styles/responsive/footer';
-
 .footer {
     border-top: 0.5px solid rgba(255,255,255,0.06);
     padding: 28px 0;
@@ -33,3 +31,5 @@
       &:hover { color: #F0EFE8; }
     }
   }
+
+@import '../../../styles/responsive/footer';

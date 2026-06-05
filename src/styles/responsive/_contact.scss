@@ -15,12 +15,29 @@
     padding: 72px 0;
   }
 
+  .contact-layout {
+    min-width: 0;
+  }
+
   .contact-form-wrap {
     padding: 24px;
+    min-width: 0;
   }
 
   .contact-item {
     padding: 14px 16px;
+    min-width: 0;
+    align-items: flex-start;
+  }
+
+  .contact-value {
+    font-size: 12px;
+    word-break: break-word;
+    line-height: 1.5;
+  }
+
+  .link-arrow {
+    display: none;
   }
 }
 

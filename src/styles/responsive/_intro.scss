@@ -3,31 +3,66 @@
 @include tablet-down {
   .hero {
     min-height: auto;
+    overflow: clip;
   }
 
   .hero-inner {
     flex: none;
     grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
+    text-align: left;
+    gap: 32px;
     padding-top: 32px;
     padding-bottom: 32px;
+    min-width: 0;
+  }
+
+  .hero-content {
+    width: 100%;
+    min-width: 0;
   }
 
   .hero-desc {
-    margin: 0 auto 36px;
+    margin: 0 0 28px;
+    max-width: 100%;
+    text-align: left;
   }
 
   .hero-actions {
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .hero-badge {
     display: inline-flex;
+    align-self: flex-start;
+  }
+
+  .hero-name {
+    text-align: left;
+    overflow-wrap: normal;
+    word-break: normal;
+    width: 100%;
+
+    span {
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+  }
+
+  .hero-role {
+    text-align: left;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .hero-visual {
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .stats-inner {
-    justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
   }
 }
 
@@ -47,43 +82,6 @@
   }
 
   .stats-inner {
-    gap: 24px;
-  }
-
-  .hero {
-    padding-top: 72px;
-  }
-
-  .blob.blob-1 {
-    width: 320px;
-    height: 320px;
-  }
-
-  .blob.blob-2 {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@include mobile-sm {
-  .hero-actions {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .btn-primary,
-  .btn-outline {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .btn-ghost {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .stats-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -91,12 +89,54 @@
   }
 
   .stat {
-    text-align: center;
+    text-align: left;
   }
 
+  .hero {
+    padding-top: 72px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-outline,
+  .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .blob.blob-1 {
+    width: 260px;
+    height: 260px;
+    right: -60px;
+    top: -40px;
+  }
+
+  .blob.blob-2 {
+    width: 180px;
+    height: 180px;
+    left: -40px;
+    bottom: 40px;
+  }
+
+  .ring-2 {
+    inset: -12px;
+  }
+}
+
+@include mobile-sm {
   .hero-badge {
     font-size: 11px;
     padding: 5px 12px;
+  }
+
+  .stats-inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 

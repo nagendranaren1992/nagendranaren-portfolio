@@ -15,9 +15,19 @@
     margin-bottom: 40px;
   }
 
+  .skills-grid {
+    min-width: 0;
+  }
+
   .skill-category,
   .workflow-section {
     padding: 22px;
+    min-width: 0;
+  }
+
+  .skill-name {
+    min-width: 0;
+    flex-wrap: wrap;
   }
 }
 

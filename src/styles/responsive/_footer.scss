@@ -7,14 +7,20 @@
 
   .footer-inner {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     gap: 12px;
   }
 
   .footer-links {
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 16px;
+  }
+
+  .footer-copy {
+    text-align: left;
+    line-height: 1.5;
   }
 }
 

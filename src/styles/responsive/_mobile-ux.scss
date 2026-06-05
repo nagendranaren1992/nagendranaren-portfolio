@@ -1,0 +1,53 @@
+@use '../breakpoints' as *;
+
+/* Prevent horizontal page scroll */
+@include mobile {
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  app-root,
+  main {
+    display: block;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Section typography — left-aligned for mobile readability */
+  .section-header {
+    text-align: left;
+  }
+
+  .section-title {
+    text-wrap: balance;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .section-desc {
+    max-width: 100%;
+    text-align: left;
+    text-wrap: pretty;
+  }
+
+  /* Only break long URLs / emails — not headings or buttons */
+  .contact-value,
+  .contact-item a {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+@include mobile-sm {
+  .container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}

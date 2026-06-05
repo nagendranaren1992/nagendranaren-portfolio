@@ -13,6 +13,7 @@
 @include mobile {
   .projects-grid {
     grid-template-columns: 1fr;
+    min-width: 0;
   }
 
   .projects {
@@ -21,6 +22,11 @@
 
   .project-card {
     padding: 22px;
+    min-width: 0;
+  }
+
+  .proj-desc {
+    text-align: left;
   }
 }
 
